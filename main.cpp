@@ -6,14 +6,17 @@
 
 using namespace std;
 
-
-struct City {
-    int id;
-    double x, y;
+struct Point {
+    int x, y;
 };
+
+double calculateDistance(const Point& a, const Point& b) {
+    return sqrt(pow(a.x - b.x, 2) + pow(a.y - b.y, 2));
+}
 
 int main()
 {
-    cout << "Hello wwWorld!" << endl;
+
+    
     return 0;
 }
