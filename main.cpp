@@ -23,6 +23,13 @@ double bruteForce(vector<Point>& points, int left, int right) {
     }
     return minDist;
 }
+
+double stripClosest(vector<Point>& strip, double d) {
+    double minDist = d;
+
+    sort(strip.begin(), strip.end(), [](const Point& a, const Point& b) {
+        return a.y < b.y;
+    })
 int main()
 {
 
