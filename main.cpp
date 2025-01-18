@@ -75,6 +75,14 @@ double divideAndConquer(vector<Point>& points, int left, int right) {
 int main()   
 {
 
-   
+       // Example delivery points
+    vector<Point> deliveryPoints = {
+        {2, 3}, {12, 30}, {40, 50}, {5, 1}, {12, 10}, {3, 4}
+    };
+
+    // Optimize the delivery routes
+    double shortestDistance = optimizeRoutes(deliveryPoints);
+
+    cout << "Shortest delivery route distance: " << shortestDistance << endl;
     return 0;
 }
