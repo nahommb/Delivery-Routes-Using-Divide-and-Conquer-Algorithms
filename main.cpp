@@ -82,6 +82,17 @@ int main()
 
     // Optimize the delivery routes
     double shortestDistance = optimizeRoutes(deliveryPoints);
+    // for displaying the delivery points
+    displayPoints(deliveryPoints);
+
+    //Calculating the average distance between points
+    //Just for the sake of having general insights in to how far the points relative to each other
+    double averageDistance = calculateAverageDistance(deliveryPoints);
+    
+    cout << "Average distance between all points: " << averageDistance << endl;
+    cout << "Closest points: (" << closestPair.first.x << ", " << closestPair.first.y << ") and (" << closestPair.second.x << ", " << closestPair.second.y << ")" << endl;
+    cout << "Total distance calculations performed: " << distanceCalculations << endl;
+
 
     cout << "Shortest delivery route distance: " << shortestDistance << endl;
     return 0;
