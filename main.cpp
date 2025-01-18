@@ -64,6 +64,14 @@ double divideAndConquer(vector<Point>& points, int left, int right) {
     return min(minDist, stripClosest(strip, minDist));
 }
   
+  double optimizeRoutes(vector<Point>& points) {
+    // Sort points by x-coordinate
+    sort(points.begin(), points.end(), [](const Point& a, const Point& b) {
+        return a.x < b.x;
+    });
+
+    return divideAndConquer(points, 0, points.size() - 1);
+}
 int main()   
 {
 
